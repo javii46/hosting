@@ -19,6 +19,8 @@ if busqueda_usuario !=None or consulta_dominio !=None:
         print "nombre de usuario o dominio existente"
         sys.exit
 else:
-        print "facil"
+#creamos el document root del usuario junto al index.html    
+        os.system("mkdir /var/www/%s" %nombre)
+        os.system("cp /home/vagrant/index.html /var/www/%s"%nombre)
 
 
