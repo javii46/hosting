@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+servername www.%nombre%.com
+DocumentRoot /var/www/%nombre%
+<Directory /var/www/%nombre%>
+Options Indexes FollowSymLinks MultiViews
+AllowOverride None
+Order allow,deny
+allow from all
+</Directory>
+</VirtualHost>

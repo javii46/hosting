@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL 604800
+@ IN SOA s1.%ndominio%. s1.%ndominio%. (
+2 ; Serial
+604800 ; Refresh
+86400 ; Retry
+2419200 ; Expire
+604800 ) ; Negative Cache TTL
+;
+NS s1.%ndominio%.
+s1 A 172.22.202.43
+www CNAME dns1
+mysql CNAME dns1
+ftp CNAME dns1

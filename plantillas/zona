@@ -1,0 +1,4 @@
+zone "%ndominio%" {
+type master;
+file "/etc/bind/db.%ndominio%";
+};
