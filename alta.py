@@ -37,7 +37,7 @@ else:
 #movemos plantilla a sites-available
                 os.system("mv /home/debian/virtual_host.mod /etc/apache2/sites-available/www.%s.conf"%ndominio)    
 #activamos el modulo y reiniciamos apache
-                activar=os.system("a2ensite www.%s"%ndominio)
+                activar=os.system("a2ensite www.%s>/dev/null"%ndominio)
                 reiniciar=os.system("service apache2 restart")
 #insertamos el usuario en mysql
                 consultauid="select max(uid) from usuarios;"
