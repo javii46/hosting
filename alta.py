@@ -35,7 +35,7 @@ else:
                 modolectura.close()
 		modoescritura.close()
 #movemos plantilla a sites-available
-                os.system("mv /home/vagrant/virtual_host.mod /etc/apache2/sites-available/www.%s"%ndominio)    
+                os.system("mv /home/debian/virtual_host.mod /etc/apache2/sites-available/www.%s.conf"%ndominio)    
 #activamos el modulo y reiniciamos apache
                 activar=os.system("a2ensite www.%s"%ndominio)
                 reiniciar=os.system("service apache2 restart")
@@ -94,7 +94,7 @@ else:
                 dominio.close()
                 filew.close()
 #cambiamos de lugar y nombre
-                os.system("mv /home/vagrant/db.plantilla.mod /etc/bind/db.%s"%ndominio)
+                 os.system("mv /home/debian/db.plantilla.mod /var/cache/bind/db.%s"%ndominio)
 #reiniciamos bind
                 reiniciar=os.system("service bind9 restart")
 		print "usuario creado correctamente"
