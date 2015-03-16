@@ -1,4 +1,5 @@
 zone "%ndominio%" {
 type master;
-file "/etc/bind/db.%ndominio%";
+file "/var/cache/bind/db.%ndominio%";
 };
+
